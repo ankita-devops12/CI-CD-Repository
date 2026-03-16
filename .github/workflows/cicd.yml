@@ -1,0 +1,25 @@
+name: CICD
+# manual click (deliver) workflow whenever user needs
+on: workflow_dispatch
+
+jobs:
+  code:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout code
+      run: echo "clone code from github"
+  build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: build the code
+       run: echo "Build the code"
+  test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: test the code
+       run: echo "test the code"
+  deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - name: deploy the code
+       run: echo "deploy the code"
