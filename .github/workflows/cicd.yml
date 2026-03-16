@@ -8,17 +8,23 @@ jobs:
    steps:
     - name: Checkout code
       run: echo "clone code from github"
+      
   build:
+   needs: [code]
    runs-on: ubuntu-latest
    steps:
      - name: build the code
        run: echo "Build the code"
+       
   test:
+   needs: [build, code]
    runs-on: ubuntu-latest
    steps:
      - name: test the code
        run: echo "test the code"
+       
   deploy:
+   needs: [build,code,test]
    runs-on: ubuntu-latest
    steps:
      - name: deploy the code
