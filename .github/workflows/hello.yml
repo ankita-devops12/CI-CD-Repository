@@ -1,6 +1,6 @@
 # name of the workflow
 name: Hello
-# run on the trigger
+# run on automatic trigger, whenever change is pused to brach (deploy)
 on: 
  push:
    branches: [main]
