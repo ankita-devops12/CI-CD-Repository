@@ -1,12 +1,22 @@
+# name of the workflow
 name: Hello
+# run on the trigger
 on: 
  push:
    branches: [main]
+ # this are the Jobs inside the workflow
 jobs:
   greet:
+  # each job need separate runner
    runs-on: ubuntu-latest
    steps:
      - name: Say hello to user
        run: echo "Hello Dosto"
      - name: Say hello to user name
        run: echo "Hello $USER"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Version of Python and Docker
+        run: docker --version && python --version
