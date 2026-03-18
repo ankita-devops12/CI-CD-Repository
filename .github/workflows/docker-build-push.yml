@@ -24,8 +24,8 @@ jobs:
                 context: .
                 push: true
                 tags: | 
-                    ${{ vars.DOCKRERHUBUSER }}/github-actions-app:${{ github.ref_name }}
-                    ${{ vars.DOCKRERHUBUSER }}/github-actions-app:${{ github.sha }}
+                   ankita1208/github-actions-app:${{ github.ref_name }}
+                   ankita1208/github-actions-app:${{ github.sha }}
 
 
 
