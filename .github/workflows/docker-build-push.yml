@@ -24,9 +24,9 @@ jobs:
                 context: .
                 push: true
                 tags:
-                    ${{vars.DOCKRERHUBUSER}}/github-action-app:${{github.ref_name}}
-                    ${{vars.DOCKRERHUBUSER}}/github-action-app:${{github.sha}}
-                    ${{vars.DOCKRERHUBUSER}}/github-action-app:latest
+                    ${{vars.DOCKRERHUBUSER}}/github-actions-app:${{github.ref_name}}
+                    ${{vars.DOCKRERHUBUSER}}/github-actions-app:${{github.sha}}
+                    ${{vars.DOCKRERHUBUSER}}/github-actions-app:latest
 
 
 
