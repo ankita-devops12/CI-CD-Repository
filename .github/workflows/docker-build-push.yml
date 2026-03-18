@@ -23,7 +23,8 @@ jobs:
               with:
                 context: .
                 push: true
-                tags:
+                tags: |
+                    ${{vars.DOCKRERHUBUSER}}/github-actions-app:${{github.ref_name}}
                     ${{vars.DOCKRERHUBUSER}}/github-actions-app:${{github.sha}}
                     ${{vars.DOCKRERHUBUSER}}/github-actions-app:latest
 
